@@ -29,35 +29,35 @@ if (21 <= currentTime && currentTime < 07) {
 
 //Get/display weather data and appropriate pic
 
-          /*  $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Stockholm&units=metric&APPID=fd674d20076b6e22dfc2b10f9599998e",function(json){
+           $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Stockholm&units=metric&APPID=fd674d20076b6e22dfc2b10f9599998e",function(json){
                 var weatherData = json.weather[0].main;
                 var temp = Math.round(json.main.temp);
-                $("#weatherInfo").append('<strong>Today\'\s temperature is:</strong> ' + temp + ' ' + 'C' + '<br>');
-                $("#weatherInfo").append('<strong>It is recommended that you bring the following: </strong>');
+                $("#Box-weather").append('<strong>Today\'\s temperature is:</strong> ' + temp + ' ' + 'C' + '<br>');
+                $("#Box-weather").append('<strong>It is recommended that you bring the following: </strong>' + '<br>');
                 console.log(weatherData);
 
                 function clothesRoulette () {
                   if (weatherData === 'Clear') {
-                    $("#weatherPic").append('<img src="img/Sunglasses.png">');
+                    $("#Box-weather").append('<img src="img/Sunglasses.png">');
                   } else if(weatherData === 'Thunderstorm') {
-                    $("#weatherPic").append('<img src="img/Raincoat.png">');
+                    $("#Box-weather").append('<img src="img/Raincoat.png">');
                   }  else if (weatherData === 'Rain') {
-                    $("#weatherPic").append('<img src="img/Umbrella.jpeg">');
+                    $("#Box-weather").append('<img src="img/Umbrella.jpeg">');
                   } else if (weatherData === 'Snow') {
-                      $("#weatherPic").append('<img src="img/Mittens.jpg">');
+                      $("#Box-weather").append('<img src="img/Mittens.jpg">');
                   } else if (weatherData === 'Atmosphere') {
-                      $("#weatherPic").append('<img src="img/Misc.png">');
+                      $("#Box-weather").append('<img src="img/Misc.png">');
                   } else if (weatherData === 'Clouds') {
-                      $("#weatherPic").append('<img src="img/Jacket.jpg">');
+                      $("#Box-weather").append('<img src="img/Jacket.jpg">');
                   } else if (weatherData === 'Extreme') {
-                      $("#weatherPic").append('<img src="img/Skull.jpg">');
+                      $("#Box-weather").append('<img src="img/Skull.jpg">');
                   } else if (weatherData === 'Additional') {
-                      $("#weatherPic").append('<img src="img/Misc.png">');
+                      $("#Box-weather").append('<img src="img/Misc.png">');
                     }
               };
 
               clothesRoulette();
-          }); */
+          });
 
 //Get/display today's doggo
 document.addEventListener('DOMContentLoaded', function() {
