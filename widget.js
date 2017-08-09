@@ -63,7 +63,7 @@ if (21 <= currentTime && currentTime < 07) {
 document.addEventListener('DOMContentLoaded', function() {
 
     request = new XMLHttpRequest;
-    request.open('GET', '//api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cute+dog', true);
+    request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cute+dog', true);
     request.onreadystatechange = function() {
       if (request.readyState === 4) {
         if (request.status >= 200 && request.status < 400) {
