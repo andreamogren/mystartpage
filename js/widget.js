@@ -1,29 +1,23 @@
 //Change background depending on time of display
-
-//07 - 10 sunrise
-//10 - 17 sun is up
-//17 - 21 sundown
-//21 - 07 night
-
 var currentTime = new Date().getHours();
 if (7 <= currentTime && currentTime < 10) {
     if (document.body) {
-        document.body.background = "img/sunrise.jpg";
+        document.body.background = "img/backgrounds/sunrise.jpg";
     }
 }
 if (10 <= currentTime && currentTime < 17) {
     if (document.body) {
-        document.body.background = "img/sun-is-up.jpg";
+        document.body.background = "img/backgrounds/sun-is-up.jpg";
     }
 }
 if (17 <= currentTime && currentTime < 21) {
     if (document.body) {
-        document.body.background = "img/sunset.jpg";
+        document.body.background = "img/backgrounds/sunset.jpg";
     }
 }
 if (21 <= currentTime && currentTime < 07) {
     if (document.body) {
-        document.body.background = "night.jpg";
+        document.body.background = "img/backgrounds/night.jpg";
     }
 }
 
@@ -32,27 +26,27 @@ if (21 <= currentTime && currentTime < 07) {
            $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=Stockholm&units=metric&APPID=fd674d20076b6e22dfc2b10f9599998e",function(json){
                 var weatherData = json.weather[0].main;
                 var temp = Math.round(json.main.temp);
-                $("#Box-weather").append('<strong>Today\'\s temperature is:</strong> ' + temp + ' ' + 'C' + '<br>');
-                $("#Box-weather").append('<strong>It is recommended that you bring the following: </strong>' + '<br>');
+                $("#Box-weather").append('Today\'\s temperature is: ' + temp + ' ' + 'C' + '<br>');
+                $("#Box-weather").append('It is recommended that you bring the following:' + '<br>');
                 console.log(weatherData);
 
                 function clothesRoulette () {
                   if (weatherData === 'Clear') {
-                    $("#Box-weather").append('<img src="img/Sunglasses.png">');
+                    $("#Box-weather").append('<img src="img/weather/Sunglasses.png">');
                   } else if(weatherData === 'Thunderstorm') {
-                    $("#Box-weather").append('<img src="img/Raincoat.png">');
+                    $("#Box-weather").append('<img src="img/weather/Raincoat.png">');
                   }  else if (weatherData === 'Rain') {
-                    $("#Box-weather").append('<img src="img/Umbrella.jpeg">');
+                    $("#Box-weather").append('<img src="img/weather/Umbrella.jpeg">');
                   } else if (weatherData === 'Snow') {
-                      $("#Box-weather").append('<img src="img/Mittens.jpg">');
+                      $("#Box-weather").append('<img src="img/weather/Mittens.jpg">');
                   } else if (weatherData === 'Atmosphere') {
-                      $("#Box-weather").append('<img src="img/Misc.png">');
+                      $("#Box-weather").append('<img src="img/weather/Misc.png">');
                   } else if (weatherData === 'Clouds') {
-                      $("#Box-weather").append('<img src="img/Jacket.jpg">');
+                      $("#Box-weather").append('<img src="img/weather/Jacket.jpg">');
                   } else if (weatherData === 'Extreme') {
-                      $("#Box-weather").append('<img src="img/Skull.jpg">');
+                      $("#Box-weather").append('<img src="img/weather/Skull.jpg">');
                   } else if (weatherData === 'Additional') {
-                      $("#Box-weather").append('<img src="img/Misc.png">');
+                      $("#Box-weather").append('<img src="img/weather/Misc.png">');
                     }
               };
 

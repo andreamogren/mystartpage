@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Muli|Pacifico|Sedgwick+Ave" rel="stylesheet">
     <script
       src="http://code.jquery.com/jquery-3.2.1.min.js"
@@ -15,12 +15,24 @@
     <main class="container">
       <div id="Box-weather">
       </div>
+      <iframe id="calendar"
+        src="https://calendar.google.com/calendar/embed?src=88o7lodhvfk61a9h1onsqkn1ps%40group.calendar.google.com&ctz=Europe/Stockholm">
+      </iframe>
       <!-- <div id="weatherPic"></div> -->
       <div id="Box-dog">
         <h2>Doggo of the Day</h2>
         <div id="imageContainer"></div>
       </div>
+      <div id="bookmarks">
+        <a href="https://mail.google.com/mail/u/0/"><img src="img/bookmarks/gmail.ico"></a>
+        <a href="https://calendar.google.com/calendar/render?pli=1#main_7"><img src="img/bookmarks/calendar.png"></a>
+        <a href="https://drive.google.com/drive/my-drive"><img src="img/bookmarks/drive.png"></a>
+        <a href="https://trello.com/"><img src="img/bookmarks/trello.png"></a>
+        <a href="https://teamtreehouse.com/home"><img src="img/bookmarks/treehouse.png"></a>
+        <a href="https://noot.space/"><img src="img/bookmarks/nootnoot.png"></a>
+      </div>
+
     </main>
-    <script src="widget.js"></script>
+    <script src="js/widget.js"></script>
   </body>
 </html>

@@ -17,16 +17,15 @@ body {
 
 .container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  flex-direction: column;
-  max-width: 80%;
-  margin: 0 auto;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 70%;
+  margin: auto;
 }
 
 #Box-weather {
-  margin: 0 auto;
-  max-width: 40%;
+  margin: left;
+  max-width: 30%;
   font-size: 30px;
   border-radius: 3%;
   padding: 20px;
@@ -38,20 +37,48 @@ body {
 #Box-weather img {
   margin: 0 auto;
   width: 90%;
-  box-sizing: border-box;
+}
+
+#calendar {
+  margin: right;
+  max-width: 50%;
+  border-radius: 3%;
+  padding: 20px;
+  margin-bottom: 5%;
+  width: 600px;
+  height: 400px;
+  background-color: #42B5F4;
+  border: none;
 }
 
 #Box-dog {
-  margin: 0 auto;
+  margin: left;
   font-size: 30px;
   border-radius: 3%;
   padding: 20px;
   margin-bottom: 5%;
-  background-color: #551A8B;
+  background-color: #9c30ff/*#551A8B*/;
   text-align: center;
 }
 
 #imageContainer {
   margin: 0 auto;
   max-width: 100%;
+}
+
+#bookmarks {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  margin: 0 auto;
+  border-radius: 3%;
+  max-width: 300px;
+  padding: 20px;
+  margin-bottom: 5%;
+  background-color: #ff5151;
+}
+
+#bookmarks img {
+  height: auto;
+  width: 150px;
 }
