@@ -15,7 +15,13 @@ if (17 <= currentTime && currentTime < 21) {
         document.body.background = "img/backgrounds/sunset.jpg";
     }
 }
-if (21 <= currentTime && currentTime < 07) {
+if (21 <= currentTime && currentTime < 24) {
+    if (document.body) {
+        document.body.background = "img/backgrounds/night.jpg";
+    }
+}
+
+if (24 <= currentTime && currentTime < 07) {
     if (document.body) {
         document.body.background = "img/backgrounds/night.jpg";
     }
