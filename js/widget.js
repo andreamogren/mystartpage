@@ -23,7 +23,7 @@ if (21 <= currentTime && currentTime < 07) {
 
 //Get/display weather data and appropriate pic
 
-           $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=Stockholm&units=metric&APPID=fd674d20076b6e22dfc2b10f9599998e",function(json){
+           $.getJSON("//api.openweathermap.org/data/2.5/weather?q=Stockholm&units=metric&APPID=fd674d20076b6e22dfc2b10f9599998e",function(json){
                 var weatherData = json.weather[0].main;
                 var temp = Math.round(json.main.temp);
                 $("#Box-weather").append('Today\'\s temperature is: ' + temp + ' ' + 'C' + '<br>');
@@ -57,7 +57,7 @@ if (21 <= currentTime && currentTime < 07) {
 document.addEventListener('DOMContentLoaded', function() {
 
     request = new XMLHttpRequest;
-    request.open('GET', 'https://api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cute+dog', true);
+    request.open('GET', '//api.giphy.com/v1/gifs/random?api_key=dc6zaTOxFJmzC&tag=cute+dog', true);
     request.onreadystatechange = function() {
       if (request.readyState === 4) {
         if (request.status >= 200 && request.status < 400) {
