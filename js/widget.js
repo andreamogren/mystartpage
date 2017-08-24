@@ -43,6 +43,8 @@ if (24 <= currentTime && currentTime < 07) {
                     $("#Box-weather").append('<img src="img/weather/Raincoat.png">');
                   }  else if (weatherData === 'Rain') {
                     $("#Box-weather").append('<img src="img/weather/Umbrella.jpeg">');
+                  } else if (weatherData === 'Drizzle') {
+                    $("#Box-weather").append('<img src="img/weather/Umbrella.jpeg">');
                   } else if (weatherData === 'Snow') {
                       $("#Box-weather").append('<img src="img/weather/Mittens.jpg">');
                   } else if (weatherData === 'Atmosphere') {
